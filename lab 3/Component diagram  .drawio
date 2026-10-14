@@ -1,0 +1,185 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="w1Mze1Uu8o3G19tkLg-b">
+    <mxGraphModel dx="1204" dy="1224" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;fontStyle=1;fontSize=16;align=center;" value="Hostel Maintenance &amp;amp; Issue Ticketing System" vertex="1">
+          <mxGeometry height="30" width="900" x="38" y="-26" as="geometry" />
+        </mxCell>
+        <mxCell id="presLayer" parent="1" style="swimlane;html=1;startSize=24;" value="Presentation Layer" vertex="1">
+          <mxGeometry height="140" width="900" x="38" y="27" as="geometry" />
+        </mxCell>
+        <mxCell id="residentUI" parent="presLayer" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="Resident App UI" vertex="1">
+          <mxGeometry height="60" width="200" x="150" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="residentUI_icon" parent="presLayer" style="shape=component;jettyWidth=8;jettyHeight=4;fillColor=#ffffff;strokeColor=#000000;html=1;" value="" vertex="1">
+          <mxGeometry height="14" width="20" x="332" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="wardenUI" parent="presLayer" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="Warden Dashboard UI" vertex="1">
+          <mxGeometry height="60" width="200" x="550" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="wardenUI_icon" parent="presLayer" style="shape=component;jettyWidth=8;jettyHeight=4;fillColor=#ffffff;strokeColor=#000000;html=1;" value="" vertex="1">
+          <mxGeometry height="14" width="20" x="732" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="busLayer" parent="1" style="swimlane;html=1;startSize=24;" value="Business Layer" vertex="1">
+          <mxGeometry height="200" width="900" x="20" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="notifComp" parent="busLayer" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="Notification Service" vertex="1">
+          <mxGeometry height="60" width="170" x="40" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="notifComp_icon" parent="busLayer" style="shape=component;jettyWidth=8;jettyHeight=4;fillColor=#ffffff;strokeColor=#000000;html=1;" value="" vertex="1">
+          <mxGeometry height="14" width="20" x="192" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="ticketMgr" parent="busLayer" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="Ticket Manager" vertex="1">
+          <mxGeometry height="60" width="170" x="250" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ticketMgr_icon" parent="busLayer" style="shape=component;jettyWidth=8;jettyHeight=4;fillColor=#ffffff;strokeColor=#000000;html=1;" value="" vertex="1">
+          <mxGeometry height="14" width="20" x="402" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="authComp" parent="busLayer" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="Authentication Component" vertex="1">
+          <mxGeometry height="60" width="170" x="460" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="authComp_icon" parent="busLayer" style="shape=component;jettyWidth=8;jettyHeight=4;fillColor=#ffffff;strokeColor=#000000;html=1;" value="" vertex="1">
+          <mxGeometry height="14" width="20" x="612" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="assignComp" parent="busLayer" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="Assignment Service" vertex="1">
+          <mxGeometry height="60" width="170" x="670" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="assignComp_icon" parent="busLayer" style="shape=component;jettyWidth=8;jettyHeight=4;fillColor=#ffffff;strokeColor=#000000;html=1;" value="" vertex="1">
+          <mxGeometry height="14" width="20" x="822" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="assignIntf" parent="busLayer" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=10;" value="AssignmentInterface" vertex="1">
+          <mxGeometry height="30" width="95" x="568" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="e_assignProvide" edge="1" parent="busLayer" source="assignIntf" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="assignComp">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="755" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_ticket_assign" edge="1" parent="busLayer" source="ticketMgr" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;endArrow=open;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="assignIntf" value="&lt;&lt;use&gt;&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="335" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dataLayer" parent="1" style="swimlane;html=1;startSize=24;" value="Data Layer" vertex="1">
+          <mxGeometry height="140" width="900" x="33" y="503" as="geometry" />
+        </mxCell>
+        <mxCell id="dbComp" parent="dataLayer" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" value="Database Component&#xa;(Tickets / Users / Status)" vertex="1">
+          <mxGeometry height="60" width="200" x="360" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dbComp_icon" parent="dataLayer" style="shape=component;jettyWidth=8;jettyHeight=4;fillColor=#ffffff;strokeColor=#000000;html=1;" value="" vertex="1">
+          <mxGeometry height="14" width="20" x="542" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="ticketIntf" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=10;" value="TicketInterface" vertex="1">
+          <mxGeometry height="27" width="69" x="315" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="loginIntf" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=10;" value="LoginInterface" vertex="1">
+          <mxGeometry height="27" width="79" x="497" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="notifyIntf" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=10;" value="NotifyInterface" vertex="1">
+          <mxGeometry height="30" width="83" x="159" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="ticketDataIntf" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=10;" value="TicketDataInterface" vertex="1">
+          <mxGeometry height="30" width="108" x="252" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="userDataIntf" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=10;" value="UserDataInterface" vertex="1">
+          <mxGeometry height="27" width="115" x="580" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ticketProvide" edge="1" parent="1" source="ticketIntf" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="ticketMgr">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="350" y="231" />
+              <mxPoint x="355" y="231" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_res_ticket" edge="1" parent="1" source="residentUI" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;endArrow=open;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="ticketIntf" value="&lt;&lt;use&gt;&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="288" y="168" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_wrd_ticket" edge="1" parent="1" source="wardenUI" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;endArrow=open;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="ticketIntf" value="&lt;&lt;use&gt;&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="443" y="107" />
+              <mxPoint x="443" y="168" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_loginProvide" edge="1" parent="1" source="loginIntf" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="authComp">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="537" y="241" />
+              <mxPoint x="565" y="241" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_res_login" edge="1" parent="1" source="residentUI" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;endArrow=open;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="loginIntf" value="&lt;&lt;use&gt;&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="537" y="107" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_wrd_login" edge="1" parent="1" source="wardenUI" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;endArrow=open;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="loginIntf" value="&lt;&lt;use&gt;&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="688" y="189" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_notifyProvide" edge="1" parent="1" source="notifyIntf" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="notifComp">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="145" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_ticket_notify" edge="1" parent="1" source="ticketMgr" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;endArrow=open;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="notifyIntf" value="&lt;&lt;use&gt;&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="355" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_ticketDataProvide" edge="1" parent="1" source="ticketDataIntf" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;rounded=0;orthogonalLoop=1;jettySize=auto;" target="dbComp">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="398" y="445" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_ticket_data" edge="1" parent="1" source="ticketMgr" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;endArrow=open;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="ticketDataIntf" value="&lt;&lt;use&gt;&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="355" y="385" />
+              <mxPoint x="306" y="385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_userDataProvide" edge="1" parent="1" source="userDataIntf" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="dbComp">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="638" y="583" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_auth_data" edge="1" parent="1" source="authComp" style="edgeStyle=orthogonalEdgeStyle;html=1;dashed=1;endArrow=open;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;" target="userDataIntf" value="&lt;&lt;use&gt;&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="565" y="402" />
+              <mxPoint x="638" y="402" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
